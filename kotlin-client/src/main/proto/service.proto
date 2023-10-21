@@ -1,0 +1,16 @@
+syntax="proto3";
+
+package org.grpc.service;
+
+service SimpleService{
+    rpc process(SimpleRequest) returns (SimpleResponse);
+}
+
+message SimpleRequest{
+    string ping = 1;
+}
+
+message SimpleResponse{
+    string pong = 1;
+    string greeting = 2;
+}
